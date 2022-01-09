@@ -11,7 +11,6 @@ import (
 func main() {
 	os.Setenv("VERSION", "1.2")
 	log.SetFlags(log.Lmicroseconds | log.Ldate)
-	// httpPandler := wrapHandlerWithLogging()
 	log.SetPrefix("[云原生]")
 	fmt.Printf("%s", os.Getenv("VERSION"))
 	http.HandleFunc("/healthz", healthz)
